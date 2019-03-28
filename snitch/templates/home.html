@@ -23,7 +23,9 @@
                 <p> This is an online platform where students can assess their teachers
                     by rating them and giving feedback on how they teach</p>
                 <p> Click the button below to access your profile and begin using the app</p>
-                <a href="#"><button type="button" class="btn btn-outline-danger move">Access Profile</button></a>
+                
+                <a href="{% url 'profile' user.id %}"><button type="button" class="btn btn-outline-danger move">View Profile</button></a>
+                
             </div>
         </div>
 

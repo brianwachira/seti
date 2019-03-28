@@ -1,0 +1,44 @@
+{% extends 'mbase.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="image">
+                <img src='{{student.image.url}}' class="logo" alt="Logo" style="width:100%">
+            </div>
+
+        </div>
+
+        <div class="col-md-5">
+            <div class=mydetails>
+                <p>Student name: <span class="name"><b>{{user.username}}</b></span></p>
+                <p>Course path: <span class="program"><b>{{student.program}}</b></span></p>
+            </div>
+
+            {% if not teacher %}
+            <a href="{% url 'enter_teacher' %}"><button class="btn btn-outline-danger">Add Your Teacher</button></a>
+            {% endif %}
+
+
+        {% if teacher %}
+        {% for t in teacher  %}
+        <p class="txt"> Teacher <span class="lives">{{t.name}} teaches me {{t.program}} </span></p>
+        <a href="#"><button class="btn btn-outline-danger">Evaluate the teacher</button></a>
+        {% endfor %}
+        {% endif %}
+
+        </div>
+
+        <div class="col-md-3">
+
+            <p class="uprof"> Student <br> Profile</p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
