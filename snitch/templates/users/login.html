@@ -1,0 +1,38 @@
+{% extends 'users/ubase.html' %}
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
+    <div class="col-md-6 power">
+        <h1 class="txt"> Power to students</h1>
+</div>
+
+        <div class="col-md-6 mx-auto formz">
+              
+            <div class="content-section">
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group form">
+                        <legend class="border-bottom mb-4"><p class="smalltxt">Sign in to access Seti</p></legend>
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group form">
+                        <button class="btn btn-outline-info" type="submit">Login Now</button>
+                    </div>
+                </form>
+
+                <div class="border-top pt-3 below">
+                    <small class="text-muted">Not a community member yet? <a class="ml-2" href="{% url 'register' %}">Register here</a></small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

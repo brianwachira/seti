@@ -1,0 +1,22 @@
+.smalltxt {
+    font-size: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.form-text {
+    display: none;
+}
+
+.power{
+    margin-top: 1em;
+    margin-left: 29em;
+    color: darkgray;
+}
+.txt{
+    font-weight: 800;
+    font-size: 60px;
+}
+.formz{
+    width: 500px;
+}
