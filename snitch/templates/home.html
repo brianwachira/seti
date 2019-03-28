@@ -1,0 +1,33 @@
+{% extends 'mbase.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<div class="container">
+    <div class="row content">
+        <div class="col-md-3">
+            <img src='/static/images/seti.png' class="logo" alt="Logo" style="width:100%">
+        </div>
+
+        <div class="col-md-5 intro">
+            <p> <span class="welcome">Introducing </span> <span class="seti">SETI</span> </p>
+            <hr>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="desc">
+                <p> This is an online platform where students can assess their teachers
+                    by rating them and giving feedback on how they teach</p>
+                <p> Click the button below to access your profile and begin using the app</p>
+                <a href="#"><button type="button" class="btn btn-outline-danger move">Access Profile</button></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
