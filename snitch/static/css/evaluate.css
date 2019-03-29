@@ -1,0 +1,70 @@
+.block{
+    margin-top: 1em;
+}
+.txt{
+    margin-left: 7em;
+    font-size: 45px;
+    font-weight: 700;
+}
+hr{
+    width: 200px;
+    margin-left: 30em;
+    margin-top: -10px;
+    border: 4px solid darkgray !important;
+}
+.tname{
+    margin-top: 3em;
+    font-size: 25px;
+    font-weight: 600;
+}
+.tprog{
+    font-size: 25px;
+    font-weight: 600;
+}
+.contain{
+    margin-left: 3em;
+}
+.txtcolor{
+    color: dimgrey;
+}
+.row{
+    margin-right: 0;
+}
+.ratetitle{
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 5em;
+    color: dimgrey;
+}
+.form-check{
+    display: inline-block;
+}
+.rate-form{
+    margin-left: 9em;
+}
+.overall{
+    margin-left: 11em;
+    margin-top: 1em;
+}
+.ratebtn{
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.col-form-label{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 3em;
+}
+.scores{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 1em;
+}
+.truth{
+    font-size: 80px;
+    font-weight: 900;
+    margin-left: 0em;
+    margin-top: 1.5em;
+    color: darkgray;
+}

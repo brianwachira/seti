@@ -26,8 +26,8 @@
 
         {% if teacher %}
         {% for t in teacher  %}
-        <p class="txt"> Teacher <span class="lives">{{t.name}} teaches me {{t.program}} </span></p>
-        <a href="#"><button class="btn btn-outline-danger">Evaluate the teacher</button></a>
+        <p class="txt"> Teacher <span class="trdetails"><b>{{t.name}}</b></span> teaches me <span class="trdetails"><b>{{t.program}}</b></span></p>
+        <a href="{% url 'rate_teacher' t.id %}"><button class="btn btn-outline-danger">Evaluate the teacher</button></a>
         {% endfor %}
         {% endif %}
 
