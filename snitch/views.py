@@ -9,12 +9,13 @@ def register(request):
     if request.method == 'POST':
         userform = UserRegisterForm(request.POST)
         if userform.is_valid():
-            userform.save()     #will save userif form is valid
-            user = userform.save(commit=False)  #creatin a usre object from the form but it proevents the object from bein saved
+            userform.save()     #will save user inputted if form is valid
+            user = userform.save(commit=False)  #create a user object from the form but it prevents the object from being saved
             username = userform.cleaned_data.get('username')
             raw_password= userform.cleaned_data.get('password')
         
-            student = Student(user=user)        #creating an instance of student with this user. The user in blue is foreign key of student, WE have to save an object to forin key, nt an id
+            student = Student(user=user)     #creating an instance of student from the user object created. 
+                                            #The user in blue is foreign key of student, We have to save an object to foreign key, nt an id
             student.save()
             return redirect('login')
     else:
