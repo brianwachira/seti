@@ -11,7 +11,7 @@ def register(request):
         if userform.is_valid():
             userform.save()     #will save user inputted if form is valid
             user = userform.save(commit=False)  #create a user object from the form but it prevents the object from being saved
-            username = userform.cleaned_data.get('username')
+            username = userform.cleaned_data.get('username')        #converting form data into python types
             raw_password= userform.cleaned_data.get('password')
         
             student = Student(user=user)     #creating an instance of student from the user object created. 

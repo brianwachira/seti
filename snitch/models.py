@@ -18,13 +18,7 @@ class Teacher(models.Model):
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    PROGRAM_CHOICES = (
-        ('Android','Android'),
-        ('Python','Python')
-    )
-    program = models.CharField(max_length =50, choices=PROGRAM_CHOICES,blank=True,null=True)
     image = models.ImageField( upload_to='profile_pics', default='default.jpeg',)
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return f"Student {self.user.username}"
@@ -39,8 +33,5 @@ class Rate(models.Model):
 
     def save_rate(self):
         self.save()
-
-
-
 
 

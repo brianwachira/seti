@@ -32,11 +32,3 @@ class RateForm(forms.ModelForm):
     class Meta:
         model = Rate
         exclude = ['stud','teacher']
-
-# class FeedbackForm(forms.ModelForm):
-#     class Meta:
-#         model = Feedback
-#         exclude = ['stud','teacher']
-#         widgets = {
-#             'opinion': forms.TextInput(attrs={'placeholder':'Add a feedback'})
-#         }
